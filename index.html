@@ -33,11 +33,24 @@ body{
 .hero{
   text-align:center;
   padding:80px 20px;
-  background-image:url('/hero-roti.jpg');
+  background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/hero-roti.jpg');
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
   border-radius:20px;
+  margin-bottom:30px;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Pseudo-element untuk blur */
+.hero::before{
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background:url('/hero-roti.jpg') center/cover no-repeat;
+  filter:blur(3px);  /* ← Nilai blur: 2px-5px */
+  z-index:-1;
 }
 
 .btn-wa{
