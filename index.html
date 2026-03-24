@@ -33,9 +33,10 @@ body{
 .hero{
   text-align:center;
   padding:80px 20px;
-  background:
-    linear-gradient(rgba(255,250,244,0.75), rgba(255,250,244,0.75)),
-    url('hero-roti.jpg') center/cover no-repeat;
+  background-image:url('/hero-roti.jpg');
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
   border-radius:20px;
 }
 
@@ -230,11 +231,14 @@ body{
 
 <div class="container">
 
-<h1 style="color:#d60000;font-weight:900;letter-spacing:0.5px;font-size:7vw;line-height:1.1;word-break:break-word;margin:0;padding:0 5px;text-align:center;">
+<!-- HERO SECTION -->
+<div class="hero" style="margin-bottom:30px;">
+  <h1 style="color:#d60000;font-weight:900;letter-spacing:0.5px;font-size:7vw;line-height:1.1;word-break:break-word;margin:0;padding:0 5px;text-align:center;">
     ASSALAMUALAIKUM
   </h1>
-  <p class="subtitle" style="color:#5a3e2b;font-size:20px;text-align:center;">
-    Roti Bakar & Snack • Fresh • Harga Bersahabat • Rasa Juara
+  <p class="subtitle" style="color:#5a3e2b;font-size:20px;text-align:center;line-height:1.4;margin:10px 0;">
+    Roti Bakar & Snack<br>
+    • Fresh • Harga Bersahabat • Rasa Juara
   </p>
 
   <p class="highlight" style="font-size:18px;color:#5a3e2b;margin-bottom:20px;text-align:center;">
@@ -252,6 +256,7 @@ body{
     PESAN UNTUK HAJATAN
   </a>
 </div>
+<!-- END HERO -->
 
 <!-- BEST SELLER -->
 <div class="section">
