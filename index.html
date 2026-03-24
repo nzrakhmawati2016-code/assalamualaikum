@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASSALAMUALAIKUM – Roti Bakar & Snack</title>
+
+<!-- SEO -->
+<meta name="description" content="ASSALAMUALAIKUM – roti bakar fresh, topping melimpah, harga bersahabat. Pesan cepat via WhatsApp area Blukid Sidoarjo.">
+<meta name="keywords" content="roti bakar blukid, roti bakar sidoarjo, roti bakar murah, roti bakar assalamualaikum">
+
+<!-- Open Graph -->
+<meta property="og:title" content="ASSALAMUALAIKUM – Roti Bakar Favorit">
+<meta property="og:description" content="Roti bakar fresh, topping melimpah, harga bersahabat.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=ASSALAMUALAIKUM+Roti+Bakar">
+<meta property="og:url" content="https://via.placeholder.com/1200x630.png?text=ASSALAMUALAIKUM+Roti+Bakar">
+
+<style>
+body{
+  margin:0;
+  font-family:'Trebuchet MS', Arial, sans-serif;
+  background:#fffaf4;
+  color:#333;
+}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
+
+.hero{
+  text-align:center;
+  padding:80px 20px;
+  background:
+    linear-gradient(rgba(255,250,244,0.75), rgba(255,250,244,0.75)),
+    url('hero-roti.jpg') center/cover no-repeat;
+  border-radius:20px;
+}
+
+.btn-wa{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 30px;
+  background:#25D366;
+  color:#fff;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+}
+
+.section{
+  margin-top:50px;
+}
+
+.section h2{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.menu-box{
+  background:#fffaf4;
+  padding:20px;
+  border-radius:10px;
+}
+
+.menu-item{
+  display:flex;
+  justify-content:space-between;
+  padding:10px 0;
+  border-bottom:1px dashed #ddd;
+}
+
+.menu-item a{
+  display:flex;
+  justify-content:space-between;
+  width:100%;
+  text-decoration:none;
+  color:#333;
+}
+
+.menu-item span:last-child{
+  font-weight:600;
+  color:#b30000;
+}
+
+.menu-item a:hover{
+  background:#fff3e8;
+  padding-left:6px;
+  transition:0.2s;
+}
+
+.best-seller-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.best-item{
+  cursor:pointer;
+  text-align:center;
+}
+
+.best-photo{
+  border-radius:16px;
+  overflow:hidden;
+  background:#fff;
+  transition:0.25s;
+}
+
+.best-photo img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  display:block;
+  cursor:pointer;
+}
+
+.best-title{
+  display:block;
+  margin-top:10px;
+  font-weight:600;
+  font-size:15px;
+}
+
+.best-item:hover .best-photo{
+  transform:translateY(-4px);
+  background:#fff3e8;
+}
+
+@media(max-width:600px){
+  .best-seller-row{
+    grid-template-columns:1fr 1fr;
+  }
+  .best-photo img{
+    height:170px;
+  }
+}
+
+.footer{
+  text-align:center;
+  margin:50px 0 20px;
+  font-size:14px;
+  color:#666;
+}
+
+
+.hero h1{
+  margin-bottom:30px;
+}
+
+.hero p.subtitle{
+  margin-bottom:35px;
+}
+
+.hero .btn-wa{
+  margin-bottom:40px;
+}
+
+.hero p.highlight{
+  font-size:16px;
+  margin-top:0;
+}
+
+.best-hint{
+  text-align:center;
+  font-size:14px;
+  color:#7a5a3a;
+  margin-top:-10px;
+  margin-bottom:20px;
+}
+
+.hapus-item{
+  color:#d60000;
+  cursor:pointer;
+  font-size:12px;
+  text-decoration:underline;
+  margin-left:10px;
+}
+
+
+.qty-control{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:10px;
+}
+
+.qty-btn{
+  width:36px;
+  height:36px;
+  border:none;
+  background:#25D366;
+  color:#fff;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:18px;
+  font-weight:bold;
+}
+
+.qty-btn:hover{
+  background:#1da851;
+}
+
+#popupQty{
+  width:60px;
+  text-align:center;
+  padding:8px;
+  border:1px solid #ddd;
+  border-radius:6px;
+  font-size:16px;
+}
+
+
+.empty-cart{
+  text-align:center;
+  padding:20px;
+  color:#999;
+}
+
+.empty-cart small{
+  display:block;
+  margin-top:5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
+  <h1 style="color:#d60000;font-weight:900;letter-spacing:2px;font-size:48px;">
+    ASSALAMUALAIKUM
+  </h1>
+
+  <p class="subtitle" style="color:#5a3e2b;font-size:20px;">
+    Roti Bakar & Snack • Fresh • Harga Bersahabat • Rasa Juara
+  </p>
+
+  <p class="highlight" style="font-size:18px;color:#5a3e2b;margin-bottom:20px;">
+    <b>📋PILIH CARA PESAN:</b><br><br>
+    <span style="color:#25D366;">PESAN BIASA</span> (1-10 porsi)<br>
+    Pilih menu di bawah → Atur jumlah → Kirim ke WhatsApp<br><br>
+    <span style="color:#ff6b00;">PESAN HAJATAN</span> (banyak porsi)<br>
+    Klik tombol orange di bawah → Chat admin
+  </p>
+
+  <a href="https://wa.me/6281558191824?text=Halo,%20saya%20mau%20pesan%20untuk%20acara%20hajatan" 
+   class="btn-wa" 
+   target="_blank"
+   style="background:#ff6b00;">
+    PESAN UNTUK HAJATAN
+  </a>
+</div>
+
+<!-- BEST SELLER -->
+<div class="section">
+  <h2>Menu Best Seller 🔥</h2>
+  <p class="best-hint">🔥 Banyak yang pesan dari sini • Sentuh menu untuk mulai</p>
+  
+  <div class="best-seller-row" id="bestSellerContainer">
+  </div>
+</div>
+
+<!-- MENU LENGKAP -->
+<div class="section">
+<h2>Menu Lengkap</h2>
+<p class="best-hint">🍞 Pilih menu favoritmu, topping bisa diatur</p>
+<div class="menu-box" id="menuContainer">
+</div>
+</div>
+
+<!-- KERANJANG -->
+<div class="section">
+  <div class="menu-box">
+    <p style="font-size:14px;color:#7a5a3a;">
+      💡 Setelah memilih menu, cek pesananmu di keranjang lalu kirim ke WhatsApp
+    </p>
+    <h3>🛒 Keranjang Pesanan</h3>
+    <div id="cartList"></div>
+    <hr>
+    <b>Total: Rp<span id="cartTotal">0</span></b><br><br>
+    <a href="javascript:void(0)" onclick="sendWhatsApp()" style="background:#25D366;color:#fff;padding:12px 20px;border-radius:25px;text-decoration:none;cursor:pointer;display:inline-block;">
+      Kirim Pesanan ke WhatsApp
+    </a>
+    
+  </div>
+</div>
+
+<!-- INFO PESANAN HAJATAN -->
+<div class="section">
+  <div class="menu-box" style="background:#fff3e8;">
+    <p style="text-align:center;font-size:16px;font-weight:600;color:#5a3e2b;margin:0;">
+      Menerima pesanan untuk <b>sedekah & acara hajatan</b><br>
+      <span style="font-size:14px;font-weight:normal;">
+        Pesan banyak? Klik tombol orange "PESAN UNTUK HAJATAN" di atas
+      </span>
+    </p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© ASSALAMUALAIKUM – Roti Bakar & Snack<br>
+📍 Blukid Residence 1 Blok B no 17, Sidoarjo<br>
+⏰ Buka setiap hari | 17.00 – 23.00
+</div>
+
+</div>
+
+<script>
+const daftarMenu = {
+  djadoel: { 
+    nama: "Djadoel (olesan mentega + gulpas)", 
+    harga: 6000, 
+    kategori: "roti", 
+    bestSeller: true,
+    gambar: "best-djadoel.jpg"
+  },
+  selaiNanas: { 
+    nama: "Selai Nanas", 
+    harga: 6000, 
+    kategori: "roti", 
+    bestSeller: false,
+    gambar: "best-selai-nanas.jpg"
+  },
+  selaiStrawberry: { 
+    nama: "Selai Strawberry", 
+    harga: 6000, 
+    kategori: "roti", 
+    bestSeller: false,
+    gambar: "best-strawberry.jpg"
+  },
+  selaiBlueberry: { 
+    nama: "Selai Blueberry", 
+    harga: 6000, 
+    kategori: "roti", 
+    bestSeller: false,
+    gambar: "best-blueberry.jpg"
+  },
+  coklat: { 
+    nama: "Coklat", 
+    harga: 10000, 
+    kategori: "roti", 
+    bestSeller: false,
+    gambar: "best-coklat.jpg"
+  },
+  tiramisu: { 
+    nama: "Tiramisu", 
+    harga: 10000, 
+    kategori: "roti", 
+    bestSeller: false,
+    gambar: "best-tiramisu.jpg"
+  },
+  cappuccino: { 
+    nama: "Cappuccino", 
+    harga: 10000, 
+    kategori: "roti", 
+    bestSeller: false,
+    gambar: "best-cappuccino.jpg"
+  },
+  matcha: { 
+    nama: "Matcha/Green Tea", 
+    harga: 10000, 
+    kategori: "roti", 
+    bestSeller: false,
+    gambar: "best-matcha.jpg"
+  },
+  cocoCrunch: { 
+    nama: "Coco Crunch", 
+    harga: 12000, 
+    kategori: "roti", 
+    bestSeller: true,
+    gambar: "best-coco-crunch.jpg"
+  },
+  meses: { 
+    nama: "Meses", 
+    harga: 12000, 
+    kategori: "roti", 
+    bestSeller: false,
+    gambar: "best-meses.jpg"
+  },
+  terbul: { 
+    nama: "Terbul (Coklat + kacang + susu)", 
+    harga: 12000, 
+    kategori: "roti", 
+    bestSeller: false,
+    gambar: "best-terbul.jpg"
+  },
+  sweetCheese: { 
+    nama: "Sweet Cheese (Keju parut + susu)", 
+    harga: 12000, 
+    kategori: "roti", 
+    bestSeller: false,
+    gambar: "best-sweet-cheese.jpg"
+  },
+  sandwichSosisOmelet: { 
+    nama: "Sandwich (sosis kimbo bakar,telur omelet,sayuran,saos)", 
+    harga: 15000, 
+    kategori: "roti", 
+    bestSeller: true,
+    gambar: "best-sandwich.jpg"
+  },
+  esTeh: {
+    nama: "Es Teh", 
+    harga: 5000, 
+    kategori: "minuman", 
+    bestSeller: false,
+    gambar: "best-es-teh.jpg"
+  },
+};  
+
+// Topping (4 pilihan sekarang - termasuk kombinasi)
+const topping = {
+  tidakAda: { nama: "Tidak pakai topping", harga: 0 },
+  meses: { nama: "Coklat Meses", harga: 3000 },
+  keju: { nama: "Keju Parut", harga: 3000 },
+  mesesKeju: { nama: "Coklat Meses + Keju Parut", harga: 6000 }
+};
+
+let cart = [];
+let currentItem = {};
+
+window.onload = function() {
+  const savedCart = localStorage.getItem('cart');
+  if (savedCart) {
+    cart = JSON.parse(savedCart);
+    renderCart();
+  }
+  generateBestSeller();
+  generateMenu();
+};
+
+function generateBestSeller() {
+  let html = '';
+  for (let key in daftarMenu) {
+    if (daftarMenu[key].bestSeller) {
+      let menu = daftarMenu[key];
+      let gambarFile = menu.gambar || ('best-' + key.toLowerCase().replace(/([A-Z])/g, '-$1').replace(/^-/, '') + '.jpg');
+      html += `
+        <div class="best-item" onclick="openPopup('${menu.nama}', ${menu.harga}, '${menu.kategori}')">
+          <div class="best-photo">
+            <img src="${gambarFile}" alt="${menu.nama}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x240?text=${encodeURIComponent(menu.nama)}'">
+          </div>
+          <span class="best-title">${menu.nama} 😋</span>
+        </div>
+      `;
+    }
+  }
+  document.getElementById('bestSellerContainer').innerHTML = html;
+}
+
+function generateMenu() {
+  let html = '';
+  let kategoriList = {};
+  for (let key in daftarMenu) {
+    let kat = daftarMenu[key].kategori;
+    if (!kategoriList[kat]) kategoriList[kat] = [];
+    kategoriList[kat].push({key: key, ...daftarMenu[key]});
+  }
+  
+  let judulKategori = {
+    roti: '🍞 Roti Bakar',
+    snack: '🍟 Snack',
+    minuman: '🥤 Minuman'
+  };
+  
+  for (let kat in kategoriList) {
+    html += `<h3>${judulKategori[kat] || kat}</h3>`;
+    kategoriList[kat].forEach(item => {
+      let bestSellerBadge = item.bestSeller ? ' (Best Seller) 😋' : '';
+      html += `
+        <div class="menu-item">
+          <a href="javascript:void(0)" onclick="openPopup('${item.nama}', ${item.harga}, '${item.kategori}')">
+            <span>${item.nama}${bestSellerBadge}</span>
+            <span>Rp${item.harga.toLocaleString('id-ID')}</span>
+          </a>
+        </div>
+      `;
+    });
+  }
+  
+  html += `<h3>🍭 Topping Tambahan (khusus Roti Bakar)</h3>`;
+  for (let key in topping) {
+    if (key !== 'tidakAda') {
+      html += `
+        <div class="menu-item">
+          <span>+ ${topping[key].nama}</span>
+          <span>Rp${topping[key].harga.toLocaleString('id-ID')}</span>
+        </div>
+      `;
+    }
+  }
+  
+  document.getElementById('menuContainer').innerHTML = html;
+}
+
+function openPopup(nama, harga, kategori){
+  currentItem = { nama, harga, kategori };
+  document.getElementById("popupTitle").innerText = nama;
+  document.getElementById("popupQty").value = 1;
+  document.getElementById("popupCatatan").value = "";
+  
+  let toppingSelect = document.getElementById("popupTopping");
+  let toppingLabel = document.getElementById("popupToppingLabel");
+  let catatanLabel = document.getElementById("popupCatatanLabel");
+  let catatanInput = document.getElementById("popupCatatan");
+  
+  if (kategori === 'roti') {
+    toppingSelect.style.display = 'block';
+    toppingLabel.style.display = 'block';
+    toppingSelect.innerHTML = `
+      <option value="tidakAda">${topping.tidakAda.nama}</option>
+      <option value="meses">${topping.meses.nama} (+Rp${topping.meses.harga.toLocaleString('id-ID')})</option>
+      <option value="keju">${topping.keju.nama} (+Rp${topping.keju.harga.toLocaleString('id-ID')})</option>
+      <option value="mesesKeju">${topping.mesesKeju.nama} (+Rp${topping.mesesKeju.harga.toLocaleString('id-ID')})</option>
+    `;
+  } else {
+  toppingSelect.style.display = 'none';    // ← Topping disembunyikan
+  toppingLabel.style.display = 'none';     // ← Label topping disembunyikan
+}
+  
+  catatanLabel.style.display = 'block';
+  catatanInput.style.display = 'block';
+  
+  document.getElementById("popupMenu").style.display = "flex";
+}
+
+function closePopup(){
+  document.getElementById("popupMenu").style.display = "none";
+}
+
+function changeQty(delta){
+  let input = document.getElementById("popupQty");
+  let val = parseInt(input.value) || 1;
+  val += delta;
+  if (val < 1) val = 1;
+  if (val > 99) val = 99;
+  input.value = val;
+}
+
+function addToCart(){
+  let qty = parseInt(document.getElementById("popupQty").value);
+  
+  if (isNaN(qty) || qty < 1) {
+    alert("Jumlah minimal 1");
+    return;
+  }
+  
+  let toppingPrice = 0;
+  let toppingText = topping.tidakAda.nama;
+  let catatan = document.getElementById("popupCatatan").value;
+  
+  if (currentItem.kategori === 'roti') {
+    let selectedTopping = document.getElementById("popupTopping").value;
+    if (selectedTopping === 'meses') {
+      toppingPrice = topping.meses.harga;
+      toppingText = topping.meses.nama + " (+Rp" + topping.meses.harga.toLocaleString('id-ID') + ")";
+    } else if (selectedTopping === 'keju') {
+      toppingPrice = topping.keju.harga;
+      toppingText = topping.keju.nama + " (+Rp" + topping.keju.harga.toLocaleString('id-ID') + ")";
+    } else if (selectedTopping === 'mesesKeju') {
+      toppingPrice = topping.mesesKeju.harga;
+      toppingText = topping.mesesKeju.nama + " (+Rp" + topping.mesesKeju.harga.toLocaleString('id-ID') + ")";
+    }
+  }
+
+  let subtotal = (currentItem.harga + toppingPrice) * qty;
+
+  cart.push({
+    name: currentItem.nama,
+    price: currentItem.harga,
+    qty,
+    topping: toppingText,
+    toppingPrice,
+    catatan: catatan,
+    subtotal
+  });
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  closePopup();
+  renderCart();
+}
+
+function hapusItem(index){
+  if(confirm("Yakin hapus item ini?")) {
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+  }
+}
+
+function resetCart(){
+  if(confirm("Yakin ingin mengosongkan keranjang?")){
+    cart = [];
+    localStorage.removeItem('cart');
+    renderCart();
+  }
+}
+
+function renderCart(){
+  let html = "";
+  let total = 0;
+
+  cart.forEach((item, i)=>{
+    total += item.subtotal;
+    html += `
+      <div style="margin-bottom:10px; border-bottom:1px dashed #ddd; padding-bottom:8px;">
+        <b>${i+1}. ${item.name}</b>
+        <span class="hapus-item" onclick="hapusItem(${i})">[Hapus]</span><br>
+        Jumlah : ${item.qty}<br>
+        Harga  : Rp${item.price.toLocaleString('id-ID')}<br>
+        ${item.topping !== topping.tidakAda.nama ? 'Topping: ' + item.topping + '<br>' : ''}
+        ${item.catatan ? 'Catatan: ' + item.catatan + '<br>' : ''}
+        Subtotal: Rp${item.subtotal.toLocaleString('id-ID')}
+      </div>
+    `;
+  });
+
+  document.getElementById("cartList").innerHTML = html || 
+    `<div class="empty-cart">Keranjang masih kosong<br><small>Pilih menu di atas untuk mulai memesan</small></div>`;
+  
+  document.getElementById("cartTotal").innerText = total.toLocaleString('id-ID');
+  
+}
+
+function sendWhatsApp(){
+  if(cart.length === 0){
+    alert("Keranjang masih kosong! Silakan pilih menu terlebih dahulu.");
+    return;
+  }
+  
+  let text = "🛒 PESANAN DARI ASSALAMUALAIKUM\n\n";
+  let total = 0;
+
+  cart.forEach((item,i)=>{
+    total += item.subtotal;
+    text += `${i+1}. ${item.name}\n`;
+    text += `   Jumlah : ${item.qty}\n`;
+    text += `   Harga  : Rp${item.price.toLocaleString('id-ID')}\n`;
+    if (item.topping !== topping.tidakAda.nama) {
+      text += `   Topping: ${item.topping}\n`;
+    }
+    if (item.catatan) {
+      text += `   Catatan: ${item.catatan}\n`;
+    }
+    text += `   Subtotal: Rp${item.subtotal.toLocaleString('id-ID')}\n\n`;
+  });
+
+  text += `TOTAL : Rp${total.toLocaleString('id-ID')}\n\n`;
+  
+  // ⬇️ TAMBAHAN: Instruksi pembayaran
+  text += `💳 CARA BAYAR:\n`;
+  text += `Transfer Rp${total.toLocaleString('id-ID')} ke:\n`;
+  text += `🏦 BCA 0182355150\n`;  // ← GANTI NOMOR REKENING ANDA
+  text += `👤 a.n. Nur Aida Restiati\n\n`;  // ← GANTI NAMA REKENING ANDA
+  text += `📸 Kirim bukti transfer ke WhatsApp ini\n\n`;
+  text += `⏰ Pesanan diproses setelah pembayaran diterima\n\n`;
+  text += `📍 PENGAMBILAN:\n`;
+  text += `- Ambil di tempat (gratis)\n`;
+  text += `- Atau sewa GoSend / Aplikasi Lainnya (ongkir ditanggung pembeli)\n\n`;
+  
+  text += `Terima kasih`;
+
+  window.open(
+    "https://wa.me/6281558191824?text=" + encodeURIComponent(text),
+    "_blank"
+  );
+  
+  cart = [];
+  localStorage.removeItem('cart');
+  renderCart();
+}
+</script>
+
+<!-- POPUP PILIH MENU -->
+<div id="popupMenu" style="
+  display:none;
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.5);
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+">
+  <div style="
+    background:#fffaf4;
+    padding:20px;
+    width:90%;
+    max-width:360px;
+    border-radius:14px;
+  ">
+    <h3 id="popupTitle"></h3>
+
+    <label>Jumlah</label>
+    <div class="qty-control">
+      <button class="qty-btn" onclick="changeQty(-1)">−</button>
+      <input id="popupQty" type="number" min="1" value="1" readonly>
+      <button class="qty-btn" onclick="changeQty(1)">+</button>
+    </div>
+
+    <label id="popupToppingLabel">Topping</label>
+    <select id="popupTopping" style="width:100%;padding:8px; margin-bottom:10px;">
+      <option value="tidakAda">Tidak pakai topping</option>
+      <option value="meses">Coklat Meses (+Rp3.000)</option>
+      <option value="keju">Keju Parut (+Rp3.000)</option>
+      <option value="mesesKeju">Coklat Meses + Keju Parut (+Rp6.000)</option>
+    </select>
+
+    <label id="popupCatatanLabel">Catatan (opsional)</label>
+    <input id="popupCatatan" type="text" placeholder="Contoh: tidak pedas, tambah mayones, dll"
+      style="width:100%;padding:8px;margin-bottom:10px;">
+
+    <div style="margin-top:15px;text-align:right;">
+      <button onclick="closePopup()">Batal</button>
+      <button onclick="addToCart()" style="
+        background:#25D366;
+        color:#fff;
+        border:none;
+        padding:8px 14px;
+        border-radius:6px;
+        margin-left:10px;
+      ">Tambah</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
