@@ -55,15 +55,14 @@ body{
 
 .hero h1{
   font-weight:900;
-  letter-spacing:1px;
-  font-size:clamp(24px, 8vw, 56px);
+  letter-spacing:0;
+  font-size:6vw; /* ← Tidak clamp, pure vw */
   line-height:1.2;
   text-shadow:2px 2px 4px rgba(0,0,0,0.5);
-  margin-bottom:15px;
-  word-wrap:break-word;
-  overflow-wrap:break-word;
-  max-width:100%;
-  padding:0 10px;
+  margin:0 auto 15px;
+  width:100%;
+  padding:0 5px;
+  transform:scale(0.95); /* ← Mengecilkan sedikit */
 }
 
 .hero-tagline{
