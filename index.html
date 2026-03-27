@@ -16,8 +16,8 @@
 <meta property="og:title" content="ASSALAMUALAIKUM – Roti Bakar Favorit">
 <meta property="og:description" content="Roti bakar fresh, topping melimpah, harga bersahabat.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://assalamualaikum-fnb.vercel.app/logo-assalamualaikum.png">
-<meta property="og:url" content="https://via.placeholder.com/1200x630.png?text=ASSALAMUALAIKUM+Roti+Bakar">
+<meta property="og:image" content="https://assalamualaikum-fnb.vercel.app/og-banner.jpg">
+<meta property="og:url" content="https://assalamualaikum-fnb.vercel.app/">
 <meta property="og:site_name" content="Assalamualaikum FnB">
 
 <style>
@@ -175,16 +175,17 @@ body{
 
 .best-badge{
   position:absolute;
-  top:10px;
-  left:10px;
-  background:#ff4444;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  background:rgba(255,68,68,0.9);
   color:#fff;
-  padding:5px 10px;
+  padding:6px 12px;
   border-radius:20px;
-  font-size:11px;
+  font-size:12px;
   font-weight:bold;
   z-index:10;
-  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+  box-shadow:0 2px 8px rgba(0,0,0,0.3);
 }
 
 .best-photo{
@@ -586,15 +587,15 @@ body{
 <!-- HERO SECTION -->
 <div class="hero">
   <h1 style="
-font-family:'Fredoka', sans-serif;
-font-weight:700;
+font-family:'Poppins', sans-serif;
+font-weight:900;
 color:#ffd700;
 text-align:center;
 letter-spacing:1px;
 ">
 ASSALAMUALAIKUM
 </h1>
-  <div class="hero-tagline"> Roti Bakar Fresh, Topping Melimpah, Harga Mulai 6rb!</div>
+  <div class="hero-tagline"> Roti Bakar & Snack Harga Mulai 6rb!</div>
   <div class="hero-sub">📍 Blukid Sidoarjo • ⏰ 17.00 - 23.00 • 🚀 1000+ Porsi Terjual</div>
   
   <div class="hero-cta">
@@ -1043,11 +1044,12 @@ function sendWhatsApp(){
   });
 
   text += `TOTAL : Rp${total.toLocaleString('id-ID')}\n\n`;
-  
+
+  // ⬇️ TAMBAHAN: Instruksi pembayaran
   text += `💳 CARA BAYAR:\n`;
   text += `Transfer Rp${total.toLocaleString('id-ID')} ke:\n`;
-  text += `🏦 BCA 0182355150\n`;
-  text += `👤 a.n. Nur Aida Restiati\n\n`;
+  text += `🏦 BCA 0182355150\n`;  // ← GANTI NOMOR REKENING ANDA
+  text += `👤 a.n. Nur Aida Restiati\n\n`;  // ← GANTI NAMA REKENING ANDA
   text += `📸 Kirim bukti transfer ke WhatsApp ini\n\n`;
   text += `⏰ Pesanan diproses setelah pembayaran diterima\n\n`;
   text += `📍 PENGAMBILAN:\n`;
